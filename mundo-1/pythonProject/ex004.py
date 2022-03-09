@@ -1,3 +1,5 @@
+#Tipos de dados
+
 n1 = input('Digite algo ')
 print('O tipo primitivo desse valor e {}!'.format(type(n1)))
 print('So tem espacos? {}!'.format(n1.isspace()))
