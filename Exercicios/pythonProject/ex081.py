@@ -6,17 +6,17 @@
 numbers = []
 
 while True:
-    numbers.append(int(input('Digite um valor: ')))
+    numbers.append(int(input('Digite um valor: ')))# Solicitando elementos e colocando na lista.
     
-    answer = str(input('Deseja continuar[S/N]? ')).strip()[0]
+    answer = str(input('Deseja continuar[S/N]? ')).strip()[0]# Pergunta para sair do loop
     if answer not in 'Ss':
         if answer in 'Nn':
             break
         else:
             print('\033[41mOPCAO INVALIDA\033[m')
-print(f'A quantidade de numeros digitados foi de {len(numbers)}')
-print(f'Os numeros digitados em ordem decrescente: {sorted(numbers,reverse=True)}')
-if 5  in numbers:
+print(f'A quantidade de numeros digitados foi de {len(numbers)}')# Quantidade de elementos dentro da lista
+print(f'Os numeros digitados em ordem decrescente: {sorted(numbers,reverse=True)}') # Exibindo a lista de forma decrescente
+if 5  in numbers:# Verificando se dentro da lista ha o numero 5.
     print('O numero 5 faz sim parte da lista.')
 else:
     print('O numero 5 nao faz parte da lista.') 
