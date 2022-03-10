@@ -20,13 +20,13 @@
 
 matriz = [[0,0,0],[0,0,0],[0,0,0]]
 
-for l in range(0,3):
-    for c in range(0,3):
+for l in range(0,3): # Loop para armazenar as linhas
+    for c in range(0,3):# Loop para armazenar as colunas
         matriz[l][c] = int(input(f'Digite um valor para [{l}, {c}]: '))
 
 print('-='*30)
 
-for l in range(0,3):
-    for c in range(0,3):
+for l in range(0,3): # loop para organizar as linhas
+    for c in range(0,3): # loop para organizar as colunas
         print(f'[{matriz[l][c]}]',end='')
     print()
