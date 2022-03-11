@@ -35,7 +35,7 @@ while True:
     answer2 = str(input('Deseja mostrar as notas de algum aluno? ')).strip()[0]# Condicao de saida do loop WHILE
     if answer2 in 'Ss':
         nraluno = int(input('Qual o numero do aluno? ')) # Verficando numero do aluno = INDICE na lista BOLETIM
-        if nraluno < len(boletim):
+        if nraluno <= len(boletim)-1:
             print(f'Notas de {boletim[nraluno][0]} sao: {boletim[nraluno][1]}, {boletim[nraluno][2]}') # boletim[nraluno][0] = (Nome do aluno) | boletim[nraluno][1] = (primeira nota) |  boletim[nraluno][2] = (segunda nota)
         else:
             print('Opcao Invalida')
