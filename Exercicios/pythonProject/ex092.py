@@ -16,7 +16,7 @@ if pessoa['ctps'] == 0:                         #Verificando se ctps e igual a z
 else:                                                               #Continuacao caso ctps for diferente de zero.
     pessoa['contratacao'] = int(input('Ano de contratacao: '))      #Adicionando ano de contratracao ao elemento ['contratacao']
     pessoa['salario'] = float(input('Salaraio: R$ '))               #Adicionando salario ao elemento ['salario']
-    pessoa['aposentadoria'] = 70 - age                              #Adicionando 70 - a variavel age ao elemento ['aposentadoria']
+    pessoa['aposentadoria'] = age + (pessoa['contratacao'] + 35) - datetime.today().year#Adicionando o calculo de idade para se aposentar ao elemento ['aposentadoria']
     print('=='*20)
     for k,v in pessoa.items():                                      #Loop para listar todas as keys(k) e values(v) do dicionario pessoa(pessoa.items()).
         print(f'{k} tem o valor {v}')
