@@ -46,12 +46,17 @@ while True:
     answer = str(input('Deseja mostrar dados adicionais [S/N]? ')).strip()[0]           #Verificando se a resposta esta dentro do parametro esperado  
     if answer in 'Ss':                                                                  
         showdados = int(input('Mostrar dados de qual jogador[COD ou 999 para sair]?'))  #Armazenado o indicice digitado pelo usuario em uma variavel
-        print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[showdados]["nome"]}')             #Exibindo o nome do usuario usando o indice na lista (jogadore[showdados]["nome"])
-        for c in range (0, len(jogadores[showdados]["gols"])):                          #Loop para exibir a qtde de gols usando o tam total gols armazenados (len(jogadores[showdados]["gols"]))
-            print(f'No jogo {c+1} fez {jogadores[showdados]["gols"][c]} gols.')         #Exibindo usando c+1 pois c comeca em 0 e o item armazenado em jogadores['gols'] no indice que esta o c com jogadores[showdados][c]
+        if showdados == 999:
+            break
+        if showdados >= len(jogadores):
+            print('OPCAO INVALIDA')
+        else:    
+            print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[showdados]["nome"]}')             #Exibindo o nome do usuario usando o indice na lista (jogadore[showdados]["nome"])
+            for c in range (0, len(jogadores[showdados]["gols"])):                          #Loop para exibir a qtde de gols usando o tam total gols armazenados (len(jogadores[showdados]["gols"]))
+                print(f'No jogo {c+1} fez {jogadores[showdados]["gols"][c]} gols.')         #Exibindo usando c+1 pois c comeca em 0 e o item armazenado em jogadores['gols'] no indice que esta o c com jogadores[showdados][c]
     else:                                                                               
         if answer in 'Nn':                                                              #condicao de saindo do Loop
-            break
+             break
         else:
             print('\033[41mOPCAO INVALIDA\033[m')
 
