@@ -17,7 +17,7 @@ else:
         listgols.append(gols)                                   #Adicionando o numero de gols a lista(listgols).
         c +=1                                                   #Incrementacao da variavel de contagem.
 
-    dados['gols'] = listgols                                    #Adicionando a lista de gols(listgols) ao dicionario(dados).
+    dados['gols'] = listgols[:]                                    #Adicionando a lista de gols(listgols) ao dicionario(dados).
     dados['total'] = totalgoals                                 #Adicionando a contagem total de gols(total) ao dicionario(dados).
 
     print('-='*30)
